@@ -54,13 +54,13 @@ floating_modifier Mod4
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym Mod4+q exec alacritty -e tmux
+bindsym Mod4+q exec --no-startup-id alacritty -e tmux
 
 # kill focused window
 bindsym Mod4+c kill
 
 # start rofi (a program launcher)
-bindcode --release 133 exec pkill rofi || rofi -show drun
+bindcode --release 133 exec --no-startup-id pkill rofi || rofi -show drun
 
 # change focus
 bindsym Mod4+$left focus left
@@ -149,7 +149,7 @@ bindsym Mod4+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym Mod4+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym Mod4+Shift+m exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym Mod4+Shift+m exec exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -183,15 +183,3 @@ bindsym Mod4+r mode "resize"
 bar {
   status_command i3status
 }
-
-#######################################################################
-# automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used their favorite modifier (alt or windows)
-#
-# i3-config-wizard will not launch if there already is a config file
-# in ~/.config/i3/config (or $XDG_CONFIG_HOME/i3/config if set) or
-# ~/.i3/config.
-#
-# Please remove the following exec line:
-#######################################################################
-exec i3-config-wizard
