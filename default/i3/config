@@ -59,13 +59,8 @@ bindsym Mod4+q exec alacritty -e tmux
 # kill focused window
 bindsym Mod4+c kill
 
-# start dmenu (a program launcher)
-bindsym Mod4 exec pkill rofi || rofi -show drun
-# A more modern dmenu replacement is rofi:
-# bindsym Mod4+d exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindsym Mod4+d exec --no-startup-id i3-dmenu-desktop
+# start rofi (a program launcher)
+bindcode --release 133 exec pkill rofi || rofi -show drun
 
 # change focus
 bindsym Mod4+$left focus left
