@@ -63,7 +63,13 @@ tiling_drag modifier titlebar
 bindsym $mod+w exec --no-startup-id alacritty -e tmux
 bindsym $mod+q exec --no-startup-id microsoft-edge-dev
 bindsym $mod+e exec --no-startup-id thunar
-bindcode --release 133 exec --no-startup-id pkill rofi || rofi -show drun
+
+bindsym $mod+r exec --no-startup-id pkill rofi || rofi -normal-window -show run
+bindsym Mod1+F4 exec --no-startup-id pkill rofi || power
+bindcode --release 133 exec --no-startup-id pkill rofi || rofi -normal-window -show drun
+
+# notification keybinds
+bindsym $mod+F2 exec --no-startup-id time-date
 
 # kill focused window
 bindsym $mod+c kill
@@ -183,7 +189,14 @@ mode "resize" {
   bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+Shift+r mode "resize"
+
+#############################
+# Window rule
+#############################
+
+for_window [class="Rofi"] floating enable
+for_window [class="Pavucontrol"] floating enable, resize set 800 800, move position center
 
 #############################
 # i3bar
