@@ -1,10 +1,13 @@
 #############################
-# Window Titles
+# Window configuration
 #############################
 
 #Hide window title bars
 default_border pixel 0
 default_floating_border pixel 0
+
+gaps inner 4
+gaps outer 0
 
 #############################
 # Daemons and other
