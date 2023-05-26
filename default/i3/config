@@ -65,7 +65,7 @@ tiling_drag modifier titlebar
 # application keybinds
 bindsym $mod+w exec --no-startup-id alacritty -e tmux
 bindsym $mod+q exec --no-startup-id microsoft-edge-dev
-bindsym $mod+e exec --no-startup-id thunar
+bindsym $mod+e exec --no-startup-id nautilus
 
 bindsym $mod+r exec --no-startup-id rofi -show run
 bindsym Mod1+F4 exec --no-startup-id power
