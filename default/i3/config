@@ -30,17 +30,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 #############################
-# Keycodes bindings
-#############################
-
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id changevolume up
-bindsym XF86AudioLowerVolume exec --no-startup-id changevolume down
-bindsym XF86AudioMute exec --no-startup-id changevolume mute
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-#############################
 # Keymaps
 #############################
 
