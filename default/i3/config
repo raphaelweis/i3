@@ -62,21 +62,8 @@ floating_modifier Mod4
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-# application keybinds
-bindsym $mod+w exec --no-startup-id alacritty -e tmux
-bindsym $mod+q exec --no-startup-id microsoft-edge-dev
-bindsym $mod+e exec --no-startup-id nautilus
-
-bindsym $mod+r exec --no-startup-id rofi -show run
-bindsym Mod1+F4 exec --no-startup-id power
-bindcode --release 133 exec --no-startup-id rofi -show drun
-
-# notification keybinds
-bindsym $mod+F2 exec --no-startup-id time-date
-
 # kill focused window
 bindsym $mod+c kill
-
 
 # change focus
 bindsym $mod+$left focus left
